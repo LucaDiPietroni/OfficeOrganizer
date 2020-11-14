@@ -1,0 +1,64 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.label {
+	-fx-font-family: sans-serif;
+	-fx-font-weight: bold;
+	-fx-font-size: 14 px;
+}
+
+.button{
+	-fx-border-radius: 5px;
+	-fx-background-radius: 5px;
+	-fx-border-width: 2px;
+	-fx-border-color: black;
+	-fx-font-family: serif;
+	-fx-background-color: #2D328F;
+	-fx-text-fill: white;
+	-fx-font-size: 14 px;
+	-fx-font-weight: bold;
+	-fx-font-family: sans-serif;	
+}
+
+.button:hover {
+	-fx-border-radius: 5px;
+	-fx-background-radius: 5px;
+	-fx-border-width: 2px;
+	-fx-border-color: black;
+	-fx-font-family: serif;
+	-fx-background-color: grey;
+	-fx-text-fill: black;
+	-fx-font-size: 14 px;
+	-fx-font-weight: bold;
+	-fx-font-family: sans-serif;
+}
+
+.text-field{
+	-fx-border-radius: 0px;
+	-fx-background-radius: 0px;
+	-fx-font-family: serif;
+	-fx-border-color: black;
+	-fx-font-size: 14 px;
+	-fx-font-weight: bold;
+}
+
+.background{
+	-fx-background-color: #B6B9EB;
+}
+
+.choice-box{
+	-fx-border-radius: 0px;
+	-fx-background-radius: 0px;
+	-fx-background-color: white;
+	-fx-border-width: 2px;
+	-fx-border-color: black;
+}
+
+.table-view{
+	-fx-border-width: 1px;
+	-fx-border-color: black;
+}
+
+.canvas{
+	-fx-border-width: 1px;
+	-fx-border-color: black;
+}

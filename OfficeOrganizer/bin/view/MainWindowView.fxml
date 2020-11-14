@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="520.0" prefWidth="720.0" styleClass="background" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainWindowController">
+   <children>
+      <HBox fx:id="bigBox" layoutX="250.0" layoutY="182.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="bottonBox" prefHeight="500.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <Button fx:id="loadButton" mnemonicParsing="false" onAction="#loadFile" prefHeight="30.0" prefWidth="80.0" stylesheets="@application.css" text="Wczytaj" />
+                  <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveFile" prefHeight="30.0" prefWidth="80.0" stylesheets="@application.css" text="Zapisz" />
+                  <Button fx:id="addButton" mnemonicParsing="false" onAction="#addWorker" prefHeight="30.0" prefWidth="80.0" stylesheets="@application.css" text="Dodaj" />
+                  <Button fx:id="reportButton" mnemonicParsing="false" onAction="#reportFile" prefHeight="30.0" prefWidth="80.0" stylesheets="@application.css" text="Raport" />
+               </children>
+            </VBox>
+            <TableView fx:id="workerTable" onMouseClicked="#showRecord" prefHeight="500.0" prefWidth="250.0" stylesheets="@application.css">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="90.0" text="Imię" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="90.0" text="Nazwisko" />
+                  <TableColumn fx:id="roomColumn" prefWidth="70.0" text="Pokój" />
+              </columns>
+            </TableView>
+            <VBox fx:id="fieldBox" prefHeight="500.0" prefWidth="350.0">
+               <children>
+                  <HBox prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <VBox fx:id="tableFieldsBox" prefHeight="200.0" prefWidth="175.0">
+                           <children>
+                              <Label fx:id="nameLabel" stylesheets="@application.css" text="Imię" />
+                              <TextField fx:id="nameField" stylesheets="@application.css" />
+                              <Label fx:id="lastNameLabel" stylesheets="@application.css" text="Nazwisko" />
+                              <TextField fx:id="lastNameField" stylesheets="@application.css" />
+                              <Label fx:id="roomNrLabel" stylesheets="@application.css" text="Nr pokoju" />
+                              <ChoiceBox fx:id="roomNrChoice" prefWidth="175.0" stylesheets="@application.css" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox fx:id="hourFieldsBox" prefHeight="200.0" prefWidth="175.0">
+                           <children>
+                              <Label fx:id="startHourLabel" prefHeight="35.0" stylesheets="@application.css" text="Godzina rozpoczęcia pracy" wrapText="true" />
+                              <TextField fx:id="startHourField" stylesheets="@application.css" />
+                              <Label fx:id="endHourLabel" prefHeight="35.0" stylesheets="@application.css" text="Godzina zakończenia pracy" wrapText="true" />
+                              <TextField fx:id="endHourField" stylesheets="@application.css" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="5.0" right="5.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <VBox fx:id="imageBox" prefHeight="300.0" prefWidth="100.0">
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label fx:id="officePlanLabel" stylesheets="@application.css" text="Plan biura:" />
+                        <Canvas fx:id="planCanvas" height="280.0" width="340.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</AnchorPane>
